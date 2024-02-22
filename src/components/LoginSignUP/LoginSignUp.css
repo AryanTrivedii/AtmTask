@@ -1,0 +1,95 @@
+.user-i {
+    width: 8%;
+    margin: 0px 20px;
+}
+.email-i {
+    width: 8%;
+    margin: 0px 20px;
+}
+.pass-i {
+    width: 8%;
+    margin: 0px 20px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    width: 650px;
+    margin-top: 120px;
+    background: #fff;
+    padding-bottom: 30px;
+
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    width: 100%;
+    margin-top: 30px;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3c009d;
+    font-size: 48px;
+    font-weight: 700;
+}
+.underline{
+    width:100px;
+    height:6px;
+    background:  #3c009d;
+    border-radius: 9px;
+}
+
+.inputs {
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 400px;
+    height: 80px;
+    background: #eaeaea ;
+    border-radius: 6px;
+
+}
+
+.input input {
+    height: 50px;
+    width: 450px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+     color: #797979;
+     font-size: 19px;   
+}
+.submit-container {
+    display: flex;
+    gap:30px;
+    margin: 60px auto;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background: #4c00b4;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.gray{
+    background: #eaeaea;
+    color: #676767;
+}
