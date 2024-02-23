@@ -10,8 +10,6 @@ const withdraw = async (req, res) => {
     if (!amount || isNaN(amount) || amount <= 0) {
         return res.status(400).json({ error: 'Invalid amount' });
     }
-
-    // Fetch user from the database
     const user = await Users.findOne();
 
     if (!user) {
@@ -21,8 +19,6 @@ const withdraw = async (req, res) => {
     if (amount > user.balance) {
         return res.status(400).json({ error: 'Insufficient funds' });
     }
-
-    // Update user balance
     user.balance -= amount;
     await user.save();
 
@@ -45,15 +41,13 @@ const deposit = async (req, res) => {
       if (!amount || isNaN(amount) || amount <= 0) {
           return res.status(400).json({ error: 'Invalid amount' });
       }
-  
-      // Fetch user from the database
       const user = await Users.findById(userId);
   
       if (!user) {
           return res.status(404).json({ error: 'User not found' });
       }
   
-      // Update user balance
+      
       user.balance += amount;
       await user.save();
   
@@ -74,7 +68,7 @@ const changepin = (req, res) => {
     const { userId } = req.params;
     const { oldPin, newPin } = req.body;
 
-    // Find the user by ID
+    
     const user = Users.find(u => u.id === parseInt(userId));
     if (!user) {
         return res.status(404).json({ error: 'User not found' });
